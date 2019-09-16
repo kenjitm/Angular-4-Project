@@ -10,6 +10,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { TablaComponent } from './tabla/tabla.component';
 import { CardComponent } from './card/card.component';
 import { VentaComponent } from './venta/venta.component';
+import { PaqueteriaComponent } from './paqueteria/paqueteria.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
@@ -26,6 +27,7 @@ import {MatRadioModule} from '@angular/material/radio';
     TablaComponent,
     CardComponent,
     VentaComponent,
+    PaqueteriaComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,11 +9,11 @@
 
 <div class="container" style="max-width: 550px">
   <div class="card">
-    <h5 class="card-header" style="text-align: center">Compra de Zapatos</h5>
+    <h5 class="card-header" style="text-align: center">Compañia Pequeteria</h5>
     <div class="card-body">
 
-      <img mat-card-image src="https://corteszapaterias.com/archivos/fotos/7290/grandes/DSCF8092.JPG"
-        style="max-width: 400px;">
+      <img mat-card-image src="https://www.maitsa.com/img/customs/paquete-parado-retenido-aduanas-2.png"
+        style="max-width: 440px;">
       <br>
 
       <div class="example-container">
@@ -43,30 +43,21 @@
           <div class="card-body">
 
             <mat-form-field>
-              <mat-label>Seleccione Talla</mat-label>
-              <mat-select required [formControl]='modelo'>
-                <mat-option value="modeloA">Modelo Ejecutivo</mat-option>
-                <mat-option value="modeloB">Modelo Premier</mat-option>
-                <mat-option value="modeloC">Modelo Emperador</mat-option>
+              <mat-label>Zona de envio</mat-label>
+              <mat-select required [formControl]='zona'>
+                <mat-option value="zona1">América del Norte</mat-option>
+                <mat-option value="zona2">América del Sur</mat-option>
+                <mat-option value="zona3">América Central</mat-option>
+                <mat-option value="zona4">Europa</mat-option>
+                <mat-option value="zona5">Asia</mat-option>
               </mat-select>
             </mat-form-field>
 
             <div class="form-row">
               <div class="form-group col-md-6">
                 <mat-form-field>
-                  <mat-label>Cantidad</mat-label>
+                  <mat-label>Peso (g)</mat-label>
                   <input matInput placeholder="1" required [formControl]='cantidad'>
-                </mat-form-field>
-              </div>
-
-              <div class="form-group col-md-6">
-                <mat-form-field>
-                  <mat-label>Seleccione Talla</mat-label>
-                  <mat-select required [formControl]='medida'>
-                    <mat-option value="medida8">8</mat-option>
-                    <mat-option value="medida9">9</mat-option>
-                    <mat-option value="medida10">10</mat-option>
-                  </mat-select>
                 </mat-form-field>
               </div>
             </div>
@@ -84,16 +75,9 @@
     <div class="card-body">
 
       <mat-form-field appearance="outline">
-        <mat-label>Precio Unitario</mat-label>
+        <mat-label>Cobro de entrega</mat-label>
         <input matInput [readonly]="true" placeholder="0" [formControl]='unidad'>
       </mat-form-field>
-
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label>Precio total</mat-label>
-          <input matInput [readonly]="true" laceholder="0" [formControl]='total'>
-        </mat-form-field>
-      </p>
 
     </div>
   </div>
