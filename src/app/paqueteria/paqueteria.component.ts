@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-paqueteria',
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./paqueteria.component.css']
 })
 export class PaqueteriaComponent implements OnInit {
+  titularAlerta="";
   options: FormGroup;
   valor = new FormControl('');
   nombre = new FormControl('');
@@ -63,6 +65,7 @@ export class PaqueteriaComponent implements OnInit {
 
     if ((this.cantidad.value /1000) >= 5) {
       //Alert
+      Swal.fire('El pedido sobrepasa los 5kg', this.titularAlerta, 'warning');
     }
     this.unidad.setValue('$' +  this.precioUnitario);
   }
