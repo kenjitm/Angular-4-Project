@@ -9,7 +9,7 @@
 
 <div class="container" style="max-width: 550px">
   <div class="card">
-    <h5 class="card-header" style="text-align: center">Compañia Pequeteria</h5>
+    <h5 class="card-header" style="text-align: center">Compañia Paqueteria</h5>
     <div class="card-body">
 
       <img mat-card-image src="https://www.maitsa.com/img/customs/paquete-parado-retenido-aduanas-2.png"
@@ -20,7 +20,9 @@
 
         <div class="card">
           <div class="card-body">
-
+            <p>
+              <mat-label>Información Cliente</mat-label>
+            </p>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <mat-form-field style="width: 90%">
@@ -31,16 +33,19 @@
               <div class="form-group col-md-6">
                 <mat-form-field style="width: 90%">
                   <mat-label>Cedula</mat-label>
-                  <input matInput placeholder="" required [formControl]='cedula'>
+                  <input type="number" matInput placeholder="" required [formControl]='cedula'>
                 </mat-form-field>
               </div>
             </div>
 
           </div>
         </div>
-
+        <p></p>
         <div class="card">
           <div class="card-body">
+            <p>
+              <mat-label>Información Envio</mat-label>
+            </p>
 
             <mat-form-field>
               <mat-label>Zona de envio</mat-label>
@@ -57,7 +62,7 @@
               <div class="form-group col-md-6">
                 <mat-form-field>
                   <mat-label>Peso (g)</mat-label>
-                  <input matInput placeholder="1" required [formControl]='cantidad'>
+                  <input type="number" matInput placeholder="1" required [formControl]='cantidad'>
                 </mat-form-field>
               </div>
             </div>
@@ -75,7 +80,7 @@
     <div class="card-body">
 
       <mat-form-field appearance="outline">
-        <mat-label>Cobro de entrega</mat-label>
+        <mat-label>Precio de envio</mat-label>
         <input matInput [readonly]="true" placeholder="0" [formControl]='unidad'>
       </mat-form-field>
 

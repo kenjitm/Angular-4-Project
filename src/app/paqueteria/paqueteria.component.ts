@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import swal from 'sweetalert2';
 import Swal from 'sweetalert2';
 
 @Component({
