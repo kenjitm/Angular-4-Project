@@ -3,7 +3,7 @@
   <button mat-button routerLink="card">card</button>
   <button mat-button routerLink="tabla">tabla</button>
   <button mat-button routerLink="formulario">formulario</button>
-  -->  
+  -->
   <span class="example-spacer"></span>
   <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon"></mat-icon>
   <button mat-button routerLink="venta">Zapateria</button>
@@ -12,5 +12,12 @@
 </mat-toolbar>
 
 <div>
+
   <router-outlet></router-outlet>
+  <ul>
+    <li>test</li>
+    <li *ngFor="let usuario of usuarios">
+      {{usuario.nombre}}    
+    </li>
+  </ul>
 </div>
