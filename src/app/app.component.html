@@ -13,11 +13,64 @@
 
 <div>
 
-  <router-outlet></router-outlet>
-  <ul>
-    <li>test</li>
-    <li *ngFor="let usuario of usuarios">
-      {{usuario.nombre}}    
-    </li>
-  </ul>
+  <mat-card class="example-card" *ngFor="let usuario of usuarios">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{usuario.nombre}}</mat-card-title>
+      <mat-card-subtitle>{{usuario.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+    <mat-card-content>
+      <p>
+        {{usuario.nombre}}
+      </p>
+      <p>
+        {{usuario.email}}
+      </p>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <p><button mat-raised-button (click)='cambiarEstado(usuario)' color="primary">Cambiar Estado</button></p>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-accordion title="Nombres">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
+      *ngFor="let usuario of usuarios">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{usuario.nombre}}
+        </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <p><input matInput placeholder="First name"></p>
+        <p>
+          Nombre: {{usuario.nombre}}
+        </p>
+        <p>
+          Edad: {{usuario.edad}}
+        </p>
+        <p>
+          Email: {{usuario.email}}
+        </p>
+        <p>
+          Foto: {{usuario.foto}}
+        </p>
+        <p>
+          Celular: {{usuario.celular}}
+        </p>
+        <p>
+          Cedula: {{usuario.cedula}}
+        </p>
+        <p>
+          Estado: {{usuario.estado}}
+        </p>
+        <p><button mat-raised-button (click)='cambiarEstado(usuario)' color="primary">Cambiar Estado</button></p>
+      </mat-form-field>
+    </mat-expansion-panel>
+  </mat-accordion>
+
 </div>
