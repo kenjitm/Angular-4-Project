@@ -1,76 +1,46 @@
-<mat-toolbar color="primary"> Administración de Comercios
-  <!-- 
-  <button mat-button routerLink="card">card</button>
-  <button mat-button routerLink="tabla">tabla</button>
-  <button mat-button routerLink="formulario">formulario</button>
-  -->
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon"></mat-icon>
-  <button mat-button routerLink="venta">Zapateria</button>
-  <button mat-button routerLink="paqueteria">Paqueteria</button>
-
-</mat-toolbar>
-
-<div>
-
-  <mat-card class="example-card" *ngFor="let usuario of usuarios">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{usuario.nombre}}</mat-card-title>
-      <mat-card-subtitle>{{usuario.email}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-    <mat-card-content>
-      <p>
-        {{usuario.nombre}}
-      </p>
-      <p>
-        {{usuario.email}}
-      </p>
-
-    </mat-card-content>
-    <mat-card-actions>
-      <p><button mat-raised-button (click)='cambiarEstado(usuario)' color="primary">Cambiar Estado</button></p>
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-accordion title="Nombres">
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-      *ngFor="let usuario of usuarios">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{usuario.nombre}}
-        </mat-panel-title>
-        <mat-panel-description>
-          Currently I am {{panelOpenState ? 'open' : 'closed'}}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <mat-form-field>
-        <p><input matInput placeholder="First name"></p>
+<mat-grid-list cols="4" rowHeight="400" style="padding: 10px">
+  <mat-grid-tile rowspan="4">
+    <mat-accordion class="usuario-headers-align">
+      <mat-expansion-panel hideToggle="true" *ngFor="let j of usuarios; let i = index" [expanded]="step === i">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{j.nombre}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ j.id }}
+            <mat-icon>account_circle</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
         <p>
-          Nombre: {{usuario.nombre}}
+          Edad: {{j.edad}}
         </p>
         <p>
-          Edad: {{usuario.edad}}
+          Email: {{j.email}}
         </p>
         <p>
-          Email: {{usuario.email}}
+          Celular: {{j.celular}}
         </p>
         <p>
-          Foto: {{usuario.foto}}
+          Cedula: {{j.cedula}}
         </p>
-        <p>
-          Celular: {{usuario.celular}}
-        </p>
-        <p>
-          Cedula: {{usuario.cedula}}
-        </p>
-        <p>
-          Estado: {{usuario.estado}}
-        </p>
-        <p><button mat-raised-button (click)='cambiarEstado(usuario)' color="primary">Cambiar Estado</button></p>
-      </mat-form-field>
-    </mat-expansion-panel>
-  </mat-accordion>
-
-</div>
+        <p *ngIf="j.estado" [ngStyle]="{ 'color': obtenerColor(j.estado)}">Estado: Activo</p>
+        <p *ngIf="!j.estado" [ngStyle]="{ 'color': obtenerColor(j.estado)}">Estado: Inactivo</p>
+        <button *ngIf="!j.estado" mat-raised-button (click)='activarUsuario(j)' color="primary">Activar</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-grid-tile>
+  <mat-grid-tile *ngFor="let j of usuarios; let i = index">
+    <mat-card (click)="mostrarDatos(i)" [ngClass]="{ 'usuarioInactivo': !j.estado, 'usuarioActivo':j.estado}"
+      class="usuario-card">
+      <mat-card-header>
+        <div mat-card-avatar class="usuario-header-image"></div>
+        <mat-card-title>{{j.nombre}}</mat-card-title>
+        <mat-card-subtitle>{{j.email}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="http://via.placeholder.com/200x200?text=foto+de+jugador">
+      <mat-card-actions>
+        <button mat-raised-button (click)='desactivar(j)' color="primary" [disabled]="!j.estado">Descativar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

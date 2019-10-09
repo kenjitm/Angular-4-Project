@@ -8,7 +8,8 @@
         "foto": "imagen1.jpg",
         "celular": "3009656357",
         "cedula": "65432568",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "2",
@@ -18,7 +19,8 @@
         "foto": "imagen2.jpg",
         "celular": "3009652344",
         "cedula": "5543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "3",
@@ -28,7 +30,8 @@
         "foto": "imagen3.jpg",
         "celular": "3459652387",
         "cedula": "7433256",
-        "estado": true
+        "estado": true,
+        "equipo": "Cali"
     },
     {
         "id": "4",
@@ -38,7 +41,8 @@
         "foto": "imagen4.jpg",
         "celular": "3989652387",
         "cedula": "9543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "5",
@@ -48,7 +52,8 @@
         "foto": "imagen5.jpg",
         "celular": "3329652387",
         "cedula": "54543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "6",
@@ -58,7 +63,8 @@
         "foto": "imagen6.jpg",
         "celular": "3009762387",
         "cedula": "1136543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "7",
@@ -68,7 +74,8 @@
         "foto": "imagen7.jpg",
         "celular": "1143439652387",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "8",
@@ -78,7 +85,8 @@
         "foto": "imagen8.jpg",
         "celular": "3009643387",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "Cali"
     },
     {
         "id": "9",
@@ -88,7 +96,8 @@
         "foto": "imagen9.jpg",
         "celular": "3009652380",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "Cali"
     },
     {
         "id": "10",
@@ -98,7 +107,8 @@
         "foto": "imagen10.jpg",
         "celular": "3009652389",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "Cali"
     },
     {
         "id": "11",
@@ -108,7 +118,8 @@
         "foto": "imagen.jpg",
         "celular": "3009652367",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "12",
@@ -118,7 +129,8 @@
         "foto": "imagen11.jpg",
         "celular": "3009652332",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "America"
     },
     {
         "id": "13",
@@ -128,7 +140,9 @@
         "foto": "imagen12.jpg",
         "celular": "3009652321",
         "cedula": "6543256",
-        "estado": true
+        "estado": true,
+        "equipo": "Cali"
+
     }
 ]
 }

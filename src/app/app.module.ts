@@ -20,6 +20,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

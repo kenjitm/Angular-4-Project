@@ -14,3 +14,53 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+  
+
+  .usuario-card {
+    max-width: 400px;
+  }
+  
+  .usuario-header-image {
+    background-image: url('http://via.placeholder.com/50x50?text=thumb');
+    background-size: cover;
+  }
+
+  .usuario-headers-align .mat-expansion-panel-header-title,
+  .usuario-headers-align .mat-expansion-panel-header-description{
+    flex-basis: 0;
+  }
+  .usuario-headers-align .mat-expansion-panel-header-description{
+    justify-content: space-between;
+    align-items: center;
+  }
+  :host ::ng-deep .mat-grid-tile .mat-figure{
+    align-items: unset !important;
+    padding: 20px;
+  }
+
+  .usuarioInactivo{
+    animation: fadeOut 2s;
+    animation-fill-mode: both;
+  }
+  .usuarioActivo{
+    animation: fadeIn 2s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeOut{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0.3;
+    }
+  }
+  @keyframes fadeIn{
+    0%{
+      opacity: 0.3;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
